@@ -29,7 +29,7 @@ jobs:
           go mod tidy
       #指定指定的脚本
       - name: Build
-        run: bash unit-test/run.sh
+        run: bash unit-test/build.sh
 
       - name: Test
-        run: go test -v .
+        run: bash unit-test/run.sh
