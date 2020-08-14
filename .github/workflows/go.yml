@@ -27,9 +27,13 @@ jobs:
       - name: Get dependencies
         run: |
           go mod tidy
-      #指定指定的脚本
+      #运行指定的检查
+      - name: Check
+        run: |
+          go mod tidy
+      #指定指定的构建脚本
       - name: Build
         run: bash unit-test/build.sh
-
+      #运行指定的测试脚本
       - name: Test
         run: bash unit-test/run.sh
