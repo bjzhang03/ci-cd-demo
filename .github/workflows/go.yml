@@ -22,8 +22,6 @@ jobs:
         id: go
       #检查是否存放在指定的目录里面
       - name: Check out code into the Go module directory
-        env:
-          GO111MODULE="on"
         uses:
           actions/checkout@v2
       #获取go的依赖
