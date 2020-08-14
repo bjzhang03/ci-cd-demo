@@ -32,5 +32,8 @@ jobs:
               dep ensure
           fi
       #指定指定的脚本
+      - name: Build
+        run: go build -v .
+
       - name: Test
-        run: bash unit-test/run.sh
+        run: go test -v .
