@@ -22,7 +22,7 @@ jobs:
         id: go
       #检查是否存放在指定的目录里面
       - name: Check out code into the Go module directory
-        run: mkdir -p cd $GOPATH/src/github.com/bjzhang03 && cd $GOPATH/src/github.com/bjzhang03 && /usr/bin/git init $GOPATH/src/github.com/bjzhang03/ci-cd-demo
+        uses: actions/checkout@v2
       #获取go的依赖
       - name: Get dependencies
         run: |
