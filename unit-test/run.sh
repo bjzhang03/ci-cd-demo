@@ -6,3 +6,5 @@
 #########################################################################
 #!/bin/bash
 
+set -e
+go list github.com/bjzhang03/ci-cd-demo/... | xargs go test -cover -race
